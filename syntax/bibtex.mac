@@ -1,0 +1,34 @@
+'*******************************************************************************
+' EverEdit Syntax File
+' Language:    BibTex
+' Maintainer:  www.everedit.net
+' History:
+'   2015/07/03 Created
+'*******************************************************************************
+Include( ".\const.mac" )
+
+Set bib = CreateParser()
+
+
+'Reserved words
+'Set bWord = bib.CreateWord(COLOR_WORD1, "article book booklet conference inbook incollection inproceedings manual misc mastersthesis phdthesis proceedings techreport unpublished", False)
+'bib.AddWord(bWord)
+
+Set bWord2 = bib.CreateWord(COLOR_WORD2, "address annote author booktitle chapter crossref date doi edition editor eprint howpublished institution journal key month note number organization pages publisher school series title type url volume year", False )
+bib.AddWord(bWord2)
+
+
+'Field
+Set bString = bib.CreateStringRegion(COLOR_STRING1, "{}", "", False )
+bib.AddRegion( bString )
+
+Set bString2 = bib.CreateStringRegion( COLOR_STRING1, """", "", False )
+bib.AddRegion( bString2 )
+
+
+' for @-start words
+Set bStart = bib.CreateItem( COLOR_WORD1, "^@\w+", False )
+bib.AddItem( bStart )
+
+
+bib.SetPairs( "[]''""{}()" )
