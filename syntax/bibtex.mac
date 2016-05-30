@@ -14,7 +14,7 @@ Set bib = CreateParser()
 'Set bWord = bib.CreateWord(COLOR_WORD1, "article book booklet conference inbook incollection inproceedings manual misc mastersthesis phdthesis proceedings techreport unpublished", False)
 'bib.AddWord(bWord)
 
-Set bWord2 = bib.CreateWord(COLOR_WORD2, "address annote author booktitle chapter crossref date doi edition editor eprint howpublished institution journal key month note number organization pages publisher school series title type url volume year", False )
+Set bWord2 = bib.CreateWord(COLOR_WORD2, "address annote author booktitle chapter crossref date doi edition editor eprint howpublished institution journal key month note number organization pages publisher school series title type url volume year keywords location isbn ISSN numpages", False )
 bib.AddWord(bWord2)
 
 
